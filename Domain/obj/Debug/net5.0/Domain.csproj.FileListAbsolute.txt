@@ -1,0 +1,12 @@
+C:\asp.net Core MVC adv\2023 01 28\StoreApi\Domain\bin\Debug\net5.0\Domain.deps.json
+C:\asp.net Core MVC adv\2023 01 28\StoreApi\Domain\bin\Debug\net5.0\Domain.dll
+C:\asp.net Core MVC adv\2023 01 28\StoreApi\Domain\bin\Debug\net5.0\ref\Domain.dll
+C:\asp.net Core MVC adv\2023 01 28\StoreApi\Domain\bin\Debug\net5.0\Domain.pdb
+C:\asp.net Core MVC adv\2023 01 28\StoreApi\Domain\obj\Debug\net5.0\Domain.csproj.AssemblyReference.cache
+C:\asp.net Core MVC adv\2023 01 28\StoreApi\Domain\obj\Debug\net5.0\Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\asp.net Core MVC adv\2023 01 28\StoreApi\Domain\obj\Debug\net5.0\Domain.AssemblyInfoInputs.cache
+C:\asp.net Core MVC adv\2023 01 28\StoreApi\Domain\obj\Debug\net5.0\Domain.AssemblyInfo.cs
+C:\asp.net Core MVC adv\2023 01 28\StoreApi\Domain\obj\Debug\net5.0\Domain.csproj.CoreCompileInputs.cache
+C:\asp.net Core MVC adv\2023 01 28\StoreApi\Domain\obj\Debug\net5.0\Domain.dll
+C:\asp.net Core MVC adv\2023 01 28\StoreApi\Domain\obj\Debug\net5.0\ref\Domain.dll
+C:\asp.net Core MVC adv\2023 01 28\StoreApi\Domain\obj\Debug\net5.0\Domain.pdb

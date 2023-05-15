@@ -1,0 +1,43 @@
+﻿@model Domain.ViewModel.PaymentsModel
+
+@{
+    ViewData["Title"] = "DeletePayments";
+}
+
+<h1>DeletePayments</h1>
+
+<h3>Are you sure you want to delete this?</h3>
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="DeletePayments">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="PaymentsId" class="control-label"></label>
+                <input asp-for="PaymentsId" class="form-control" />
+                <span asp-validation-for="PaymentsId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="OrdersId" class="control-label"></label>
+                <input asp-for="OrdersId" class="form-control" />
+                <span asp-validation-for="OrdersId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="PaymentsDate" class="control-label"></label>
+                <input asp-for="PaymentsDate" class="form-control" />
+                <span asp-validation-for="PaymentsDate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Amount" class="control-label"></label>
+                <input asp-for="Amount" class="form-control" />
+                <span asp-validation-for="Amount" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Delete" class="btn btn-danger" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>

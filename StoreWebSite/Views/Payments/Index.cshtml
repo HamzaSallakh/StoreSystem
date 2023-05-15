@@ -1,0 +1,60 @@
+﻿@model IEnumerable<Domain.ViewModel.PaymentsModel>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="AddPayments">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.PaymentsId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.OrdersId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PaymentsDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Amount)
+            </th>
+            <th>Edit</th>
+            <th>Delete</th>
+            <th>Details</th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.PaymentsId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.OrdersId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PaymentsDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Amount)
+            </td>
+            <td>
+                <a asp-action="UpdatePayments" asp-route-id="@item.PaymentsId"> <img src="~/images/Icons/IconEdit.png" style="margin-left: 10px; width: 25px " class="center" /> </a>
+            </td>
+            <td>
+                <a asp-action="DeletePayments" asp-route-id="@item.PaymentsId"> <img src="~/images/Icons/IconDelete.png" style="margin-left: 10px; width: 25px " class="center" /> </a>
+            </td>
+
+            <td>
+                <a asp-action="DetailsPayments" asp-route-id="@item.PaymentsId"> <img src="~/images/Icons/IconDetails.png" style="margin-left: 10px; width: 25px " class="center" /> </a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

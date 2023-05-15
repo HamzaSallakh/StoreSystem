@@ -1,0 +1,34 @@
+﻿@model Domain.ViewModel.BuyersModel
+
+@{
+    ViewData["Title"] = "DetailsBuyers";
+}
+
+<h1>DetailsBuyers</h1>
+
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="DetailsBuyers">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="BuyersId" class="control-label"></label>
+                <input asp-for="BuyersId" readonly class="form-control" />
+                <span asp-validation-for="BuyersId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="BuyersName" class="control-label"></label>
+                <input asp-for="BuyersName" readonly class="form-control" />
+                <span asp-validation-for="BuyersName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="BuyersAddress" class="control-label"></label>
+                <input asp-for="BuyersAddress" readonly class="form-control" />
+                <span asp-validation-for="BuyersAddress" class="text-danger"></span>
+            </div>
+        </form>
+    </div>
+</div>
+<div>
+    @Html.ActionLink("Edit", "UpdateBuyers", new {  id = Model.BuyersId  }) |
+    <a asp-action="Index">Back to List</a>
+</div>

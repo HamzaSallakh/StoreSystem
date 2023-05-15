@@ -1,0 +1,143 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.2.0/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="https://cdn.datatables.net/1.12.1/css/dataTables.bootstrap5.min.css" rel="stylesheet" />
+    <style>
+        * {
+            padding: 0px;
+            margin: 0px;
+        }
+
+        body {
+            background-color: #1d1919;
+        }
+
+        header {
+            background-color: black;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 15vh;
+            box-shadow: 5px 5px 10px rgb(0,0,0,0.3);
+        }
+
+        h1 {
+            letter-spacing: 1.5vw;
+            font-family: 'system-ui';
+            text-transform: uppercase;
+            text-align: center;
+        }
+
+        main {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            background: url(https://img.freepik.com/premium-photo/pasta-background-pasta-rigati-tomato-ketchup-sauce-olive-oil-spices-parsley-fresh-tomatoes-light-grey-slate-table-food-cooking-background-top-view-with-copy-space_253362-9758.jpg?w=996) no-repeat center center;
+            background-size: cover;
+            height: 100vh;
+        }
+
+        .form_class {
+            width: 500px;
+            padding: 40px;
+            border-radius: 8px;
+            background-color: white;
+            font-family: 'system-ui';
+            box-shadow: 5px 5px 10px rgb(0,0,0,0.3);
+        }
+
+        .form_div {
+            text-transform: uppercase;
+        }
+
+            .form_div > label {
+                letter-spacing: 3px;
+                font-size: 1rem;
+            }
+
+        .info_div {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .info_div {
+            letter-spacing: 1px;
+        }
+
+        .field_class {
+            width: 100%;
+            border-radius: 6px;
+            border-style: solid;
+            border-width: 1px;
+            padding: 5px 0px;
+            text-indent: 6px;
+            margin-top: 10px;
+            margin-bottom: 20px;
+            font-family: 'system-ui';
+            font-size: 0.9rem;
+            letter-spacing: 2px;
+        }
+
+        .submit_class {
+            border-style: none;
+            border-radius: 5px;
+            background-color: #FFE6D4;
+            padding: 8px 20px;
+            font-family: 'system-ui';
+            text-transform: uppercase;
+            letter-spacing: .8px;
+            display: block;
+            margin: auto;
+            margin-top: 10px;
+            box-shadow: 2px 2px 5px rgb(0,0,0,0.2);
+            cursor: pointer;
+        }
+
+        footer {
+            height: 10vh;
+            background-color: black;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: -5px -5px 10px rgb(0,0,0,0.3);
+        }
+
+            footer > p {
+                text-align: center;
+                font-family: 'system-ui';
+                letter-spacing: 3px;
+            }
+
+                footer > p > a {
+                    text-decoration: none;
+                    color: white;
+                    font-weight: bold;
+                }
+    </style>
+    <script>
+        const validarLogin = () => {
+            alert('Teste');
+        }
+    </script>
+</head>
+<body>
+
+    <div>
+        @RenderBody()
+    </div>
+    <script src="~/JsPage/Buyers.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script src="https://cdn.datatables.net/1.12.1/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.12.1/js/dataTables.bootstrap5.min.js"></script>
+</body>
+</html>

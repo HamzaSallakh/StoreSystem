@@ -1,0 +1,47 @@
+﻿@model Domain.ViewModel.RegisterModel
+
+@{
+    ViewData["Title"] = "Register";
+    Layout = "_Layout1";
+}
+<style>
+    input[type="text"] {
+        color: white;
+    }
+
+    .control-label {
+        color: white;
+    }
+
+    .info_div p {
+        color: white;
+    }
+
+    .form_class {
+        background-color: #3a444d;
+    }
+
+    a {
+        text-decoration: none;
+    }
+    h1 {
+        position: absolute;
+        top: 145px;
+    }
+</style>
+
+<main>
+    <h1 >Register</h1>
+    <form asp-action="Register" id="Register" class="form_class">
+        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+        <div class="form_div">
+            <label asp-for="Email" class="control-label"></label>
+            <input asp-for="Email" class="field_class" />
+            <span asp-validation-for="Email" class="text-danger"></span>
+            <label asp-for="Password" class="control-label"></label>
+            <input asp-for="Password" class="field_class" />
+            <input type="submit" value="Create" class="btn btn-primary" />
+        </div>
+    </form>
+</main>
+

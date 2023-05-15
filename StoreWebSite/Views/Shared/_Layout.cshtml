@@ -1,0 +1,203 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+    <link href="~/assests/css/style.css" rel="stylesheet" />
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <style>
+        .custom-logout {
+            position: relative;
+        }
+
+        .door-out {
+            display: inline-block;
+            position: relative;
+            padding: 8px;
+            background-color: #f44336;
+            color: #fff;
+            border-radius: 5px;
+            overflow: hidden;
+            transition: background-color 0.3s;
+        }
+
+        .door-frame {
+            height: 70px;
+            border-top-right-radius: 50% 20px;
+            border-bottom-right-radius: 50% 20px;
+            background-color: #fff;
+            width: 40%;
+            position: absolute;
+            right: -30px;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        .door-knob {
+            position: absolute;
+            top: 50%;
+            right: -14px;
+            width: 28px;
+            height: 28px;
+            border-radius: 50%;
+            background-color: #fff;
+            transform: translateY(-50%);
+        }
+
+        .custom-logout:hover .door-out {
+            background-color: #c62828;
+        }
+
+        .custom-logout:hover .door-knob {
+            background-color: #f44336;
+        }
+    </style>
+
+</head>
+<body>
+    <div class="wrapper d-flex align-items-stretch">
+        <nav id="sidebar">
+            <div class="p-4 pt-5">
+
+                <a href="#"> <img src="~/Images/Icons/images.png" class="img logo rounded-circle mb-5" alt="Alternate Text" /></a>
+                <ul class="list-unstyled components mb-5">
+                    <li class="active">
+                        <a href="/Home/Index" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Home</a>
+                        <ul class="collapse list-unstyled" id="homeSubmenu">
+                            <li>
+                                <a href="/Buyers/Index">Buyers</a>
+                            </li>
+                            <li>
+                                <a href="/Orders/Index">Orders</a>
+                            </li>
+                            <li>
+                                <a href="/Payments/Index">Payments</a>
+                            </li>
+                            <li>
+                                <a href="/Account/Register">Register Admin</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">About</a>
+                    </li>
+                    <li>
+                        <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Pages</a>
+                        <ul class="collapse list-unstyled" id="pageSubmenu">
+                            <li>
+                                <a href="#">Buyers </a>
+                            </li>
+                            <li>
+                                <a href="#">Orders </a>
+                            </li>
+                            <li>
+                                <a href="#">Payments</a>
+                            </li>
+
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">Portfolio</a>
+                    </li>
+                    <li>
+                        <a href="/Account/Register">Register Admin</a>
+                    </li>
+                </ul>
+
+
+
+            </div>
+        </nav>
+
+        <!-- Page Content  -->
+        <div id="content" class="p-4 p-md-5">
+
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <div class="container-fluid">
+
+                    <button type="button" id="sidebarCollapse" class="btn btn-primary">
+                        <i class="fa fa-bars"></i>
+                        <span class="sr-only">Toggle Menu</span>
+                    </button>
+                    <button class="btn btn-dark d-inline-block d-lg-none ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <i class="fa fa-bars"></i>
+                    </button>
+
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="nav navbar-nav ml-auto">
+                            <li class="nav-item active">
+                                <a class="nav-link" href="#">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="/Buyers/Index">Buyers</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="/Orders/Index">Orders</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="/Payments/Index">Payments</a>
+                            </li>
+                            <li class="nav-item custom-logout">
+                                <a class="nav-link" asp-action="Logout" asp-controller="Account" id="confirmLogout">
+                                    <div class="door-out">
+                                        <div class="door-frame">
+                                            <div class="door-knob"></div>
+                                        </div>
+                                    </div>
+                                    Sign Out
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+            <div class="container mb-4">
+
+                @RenderBody()
+            </div>
+        </div>
+    </div>
+
+
+
+    <script>
+  $(document).ready(function() {
+    // Add onclick event to the desired element
+    $('#confirmLogout').click(function(event) {
+      event.preventDefault(); // Prevent the default action of the link
+
+      Swal.fire({
+        title: 'Are you sure?',
+        text: "You won't be able to revert this!",
+        icon: 'warning',
+        showCancelButton: true,
+        confirmButtonColor: '#3085d6',
+        cancelButtonColor: '#d33',
+        confirmButtonText: 'Yes, Log Out!',
+        customClass: {
+          confirmButton: 'btn btn-primary',
+          cancelButton: 'btn btn-secondary'
+        }
+      }).then((result) => {
+        if (result.isConfirmed) {
+          // Redirect to the desired page after confirming the logout
+          window.location.href = '@Url.Action("Logout", "Account")';
+        }
+      });
+    });
+  });
+    </script>
+    <script src="~/JsPage/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.18/dist/sweetalert2.all.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="~/JsPage/jquery.min.js"></script>
+    <script src="~/JsPage/popper.js"></script>
+    <script src="~/JsPage/bootstrap.min.js"></script>
+    <script src="~/JsPage/main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,41 @@
+﻿@model Domain.ViewModel.PaymentsModel
+
+@{
+    ViewData["Title"] = "DetailsPayments";
+}
+
+<h1>DetailsPayments</h1>
+
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="DetailsPayments">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="PaymentsId" class="control-label"></label>
+                <input asp-for="PaymentsId" readonly class="form-control" />
+                <span asp-validation-for="PaymentsId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="OrdersId" class="control-label"></label>
+                <input asp-for="OrdersId" readonly class="form-control" />
+                <span asp-validation-for="OrdersId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="PaymentsDate" class="control-label"></label>
+                <input asp-for="PaymentsDate" readonly class="form-control" />
+                <span asp-validation-for="PaymentsDate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Amount" class="control-label"></label>
+                <input asp-for="Amount" readonly class="form-control" />
+                <span asp-validation-for="Amount" class="text-danger"></span>
+            </div>
+
+        </form>
+    </div>
+</div>
+<div>
+    @Html.ActionLink("Edit", "UpdatePayments", new { id = Model.PaymentsId }) |
+    <a asp-action="Index">Back to List</a>
+</div>
+

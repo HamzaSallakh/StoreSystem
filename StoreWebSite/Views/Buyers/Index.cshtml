@@ -1,0 +1,154 @@
+﻿@model IEnumerable<Domain.ViewModel.BuyersModel>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+
+<p>
+    <a asp-action="AddBuyers">Create New</a>
+</p>
+
+<table id="Table" class="table table-striped" style="width: 100%" >
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>FirstName</th>
+            <th>Address</th>
+            <th>Edit</th>
+            <th>Delete</th>
+            <th>Details</th>
+        </tr>
+
+    </thead>
+
+    <tbody id="TableBody">
+        @foreach (var buyer in Model)
+        {
+        <tr>
+            <td>@buyer.BuyersId</td>
+            <td>@buyer.BuyersName</td>
+            <td>@buyer.BuyersAddress</td>
+            <td>
+                <a asp-action="UpdateBuyers" asp-route-id="@buyer.BuyersId"> <img src="~/images/Icons/IconEdit.png" style="margin-left: 10px; width: 25px " class="center" /> </a>
+            </td>
+            <td>
+                <a asp-action="DeleteBuyers" asp-route-id="@buyer.BuyersId"> <img src="~/images/Icons/IconDelete.png" style="margin-left: 10px; width: 25px " class="center" /> </a>
+            </td>
+
+            <td>
+                <a asp-action="DetailsBuyers" asp-route-id="@buyer.BuyersId"> <img src="~/images/Icons/IconDetails.png" style="margin-left: 10px; width: 25px " class="center" /> </a>
+            </td>
+        </tr>
+        }
+    </tbody>
+
+    <tfoot>
+        <tr>
+            <th>ID</th>
+            <th>FirstName</th>
+            <th>Address</th>
+            <th>Edit</th>
+            <th>Delete</th>
+            <th>Details</th>
+        </tr>
+
+    </tfoot>
+
+</table>
+<script src="~/JsPage/jquery.min.js"></script>
+<script>
+    $(document).ready(function () {
+        $('#Table').DataTable();
+    });
+</script>
+@*@section scripts {
+    <script>
+       $(document).ready(function () {
+    loadData();
+
+    function loadData() {
+        $.ajax({
+            url: '/ajax/Buyers/Index',
+            type: 'POST',
+            success: function (data) {
+                updateTable(data);
+            },
+            error: function () {
+                alert('Error occurred while loading data.');
+            }
+        });
+    }
+
+    function updateTable(data) {
+        var tableBody = $('#TableBody');
+        tableBody.empty(); // Clear the table body
+
+        $.each(data, function (index, buyer) {
+            var row = '<tr>' +
+                '<td>' + buyer.BuyersId + '</td>' +
+                '<td>' + buyer.BuyersName + '</td>' +
+                '<td>' + buyer.BuyersAddress + '</td>' +
+                '</tr>';
+
+            tableBody.append(row);
+        });
+    }
+});
+    </script>
+}*@
+@*<script>
+        $(function () {
+            BuyersGetData();
+        })
+        function BuyersGetData() {
+        $.ajax({
+            type: "POST",
+            url:"/Buyers/Index" ,
+            data: "{}",
+            contentType: "application/json;charset:utf-8",
+            dataType: "json",
+            success: function (response) {
+                var dataa
+                $.each(JSON.parse(response.d), function (index, column) {
+                    dataa += ("<tr >\
+                                            <td> "+ column.BuyersId + "</td> + <td>" + column.Name + "</td> + <td>" + column.BuyersAddress + "</td></tr>");
+                })
+
+                $("#TableBody").html(
+                    dataa
+                );
+
+            },
+            //error: function (response, textStatus, errorThrown) {
+            //    var err = eval("(" + response.responseText + ")");
+            //    alert(err.Message);
+            //}
+        });
+
+        $('#Table').DataTable();
+
+    }
+    </script>*@
+
+@*<table class="table">
+        <thead>
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.BuyersId)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.BuyersName)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.BuyersAddress)
+                </th>
+                <th>Edit</th>
+                <th>Delete</th>
+                <th>Details</th>
+            </tr>
+        </thead>
+        <tbody id="TableBody">
+
+        </tbody>
+    </table>*@

@@ -1,0 +1,66 @@
+﻿@model Domain.ViewModel.LoginModel
+
+@{
+    ViewData["Title"] = "Login";
+    Layout = "_Layout1";
+}
+
+<style>
+    input[type="text"] {
+        color: white;
+    }
+    .control-label {
+        color: white;
+    }
+    .info_div p {
+        color: white;
+    }
+    .form_class {
+        background-color: #3a444d;
+    }
+    a {
+    text-decoration:none;
+    }
+</style>
+<main >
+    <form asp-action="Login" id="Login" class="form_class" >
+        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+        <div class="form_div">
+            <label asp-for="Email" class="control-label"></label>
+            <input asp-for="Email" class="field_class" />
+            <span asp-validation-for="Email" class="text-danger"></span>
+            <label asp-for="Password" class="control-label"></label>
+            <input asp-for="Password" class="field_class" />
+            <input type="submit" value="Login" class="btn btn-light" />
+        </div>
+        <div class="info_div">
+            <p> Forget password? <a href="#">ReSet!</a></p>
+            <p> Don't have an email? <a href="Account/Register"> Regiser! </a></p>
+        </div>
+    </form>
+</main>
+@*<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Login">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Email" class="control-label"></label>
+                <input asp-for="Email" class="form-control" />
+                <span asp-validation-for="Email" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Password" class="control-label"></label>
+                <input asp-for="Password" class="form-control" />
+                <span asp-validation-for="Password" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>*@
+
+@*<div>
+    <a asp-action="Index">Back to List</a>
+</div>*@
+

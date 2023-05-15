@@ -1,0 +1,17 @@
+C:\asp.net Core MVC adv\2023 01 28\StoreApi\Services\bin\Debug\net5.0\Services.deps.json
+C:\asp.net Core MVC adv\2023 01 28\StoreApi\Services\bin\Debug\net5.0\Services.dll
+C:\asp.net Core MVC adv\2023 01 28\StoreApi\Services\bin\Debug\net5.0\ref\Services.dll
+C:\asp.net Core MVC adv\2023 01 28\StoreApi\Services\bin\Debug\net5.0\Services.pdb
+C:\asp.net Core MVC adv\2023 01 28\StoreApi\Services\obj\Debug\net5.0\Services.csproj.AssemblyReference.cache
+C:\asp.net Core MVC adv\2023 01 28\StoreApi\Services\obj\Debug\net5.0\Services.GeneratedMSBuildEditorConfig.editorconfig
+C:\asp.net Core MVC adv\2023 01 28\StoreApi\Services\obj\Debug\net5.0\Services.AssemblyInfoInputs.cache
+C:\asp.net Core MVC adv\2023 01 28\StoreApi\Services\obj\Debug\net5.0\Services.AssemblyInfo.cs
+C:\asp.net Core MVC adv\2023 01 28\StoreApi\Services\obj\Debug\net5.0\Services.csproj.CoreCompileInputs.cache
+C:\asp.net Core MVC adv\2023 01 28\StoreApi\Services\obj\Debug\net5.0\Services.dll
+C:\asp.net Core MVC adv\2023 01 28\StoreApi\Services\obj\Debug\net5.0\ref\Services.dll
+C:\asp.net Core MVC adv\2023 01 28\StoreApi\Services\obj\Debug\net5.0\Services.pdb
+C:\asp.net Core MVC adv\2023 01 28\StoreApi\Services\bin\Debug\net5.0\Domain.dll
+C:\asp.net Core MVC adv\2023 01 28\StoreApi\Services\bin\Debug\net5.0\Domain.pdb
+C:\asp.net Core MVC adv\2023 01 28\StoreApi\Services\obj\Debug\net5.0\Services.csproj.CopyComplete
+C:\asp.net Core MVC adv\2023 01 28\StoreApi\Services\bin\Debug\net5.0\Repository.dll
+C:\asp.net Core MVC adv\2023 01 28\StoreApi\Services\bin\Debug\net5.0\Repository.pdb
